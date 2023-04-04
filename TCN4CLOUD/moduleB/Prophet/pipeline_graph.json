@@ -1,0 +1,124 @@
+{
+    "schema_name": "pipeline_graph",
+    "schema_version": "1.0.0",
+    "data": {
+        "module_nodes": {
+            "0ff04ab4": {
+                "node_id": "0ff04ab4",
+                "name": "ProphetModel",
+                "status": "model"
+            },
+            "c2d11e5b": {
+                "node_id": "c2d11e5b",
+                "name": "Categorical",
+                "status": "dataType"
+            },
+            "df2a99e8": {
+                "node_id": "df2a99e8",
+                "name": "LabelEncoder",
+                "status": "operation"
+            },
+            "e052ac27": {
+                "node_id": "e052ac27",
+                "name": "Numeric",
+                "status": "dataType"
+            },
+            "327a0ea0": {
+                "node_id": "327a0ea0",
+                "name": "MedianImputer",
+                "status": "operation"
+            },
+            "3d466b34": {
+                "node_id": "3d466b34",
+                "name": "ImputationMarker",
+                "status": "operation"
+            },
+            "477edd9b": {
+                "node_id": "477edd9b",
+                "name": "ImputationMarker",
+                "status": "operation"
+            }
+        },
+        "edges": [
+            {
+                "source_node_id": "82c061c6",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "3 col",
+                "dst_node_id": "c2d11e5b",
+                "dst_node_name": "Categorical"
+            },
+            {
+                "source_node_id": "c2d11e5b",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "df2a99e8",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "df2a99e8",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "0ff04ab4",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "82c061c6",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "2 col",
+                "dst_node_id": "e052ac27",
+                "dst_node_name": "Numeric"
+            },
+            {
+                "source_node_id": "e052ac27",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "327a0ea0",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "3d466b34",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "0ff04ab4",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "327a0ea0",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "3d466b34",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "e052ac27",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "477edd9b",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "477edd9b",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "0ff04ab4",
+                "dst_node_name": ""
+            }
+        ],
+        "child_runs": [],
+        "datasource_nodes": {
+            "82c061c6": {
+                "node_id": "82c061c6",
+                "name": "data_source - 5 col"
+            }
+        }
+    }
+}
